@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_region"
+            android:title="관심지역">
+            <menu>
+                <item
+                    android:id="@+id/menu_search"
+                    android:title="위치검색" />
+            </menu>
+        </item>
+    </group>
+
+    <item
+        android:id="@+id/setup"
+        android:title="설정"
+        >
+        <menu>
+            <item
+                android:id="@+id/menu_gps"
+                android:title="현재 위치 사용" />
+            <item
+                android:id="@+id/menu_temperature"
+                android:title="온도" />
+            <item
+                android:id="@+id/menu_alarm"
+                android:title="알람 설정" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menu_information"
+        android:title="에어케어 정보"
+        >
+        <menu>
+            <item
+                android:id="@+id/menu_notice"
+                android:title="공지사항"/>
+
+            <item
+                android:id="@+id/menu_tutorial"
+                android:title="사용안내"/>
+        </menu>
+
+
+    </item>
+
+
+</menu>
