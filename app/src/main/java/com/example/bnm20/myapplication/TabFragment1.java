@@ -30,14 +30,8 @@ public class TabFragment1 extends Fragment {
 
         View v = inflater.inflate(R.layout.tabfragment1, container, false);
 
-        imageView = (ImageView) v.findViewById(R.id.main_content1_image);
-        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) imageView.getLayoutParams();
-        params.width = deviceWidth;
-        params.height = deviceHeight - statusheight;
-        imageView.setLayoutParams(params);
-
-        Drawable alpha = imageView.getDrawable();
-        alpha.setAlpha(99);
+        //Drawable alpha = imageView.getDrawable();
+        //alpha.setAlpha(99);
 
         return v;
     }

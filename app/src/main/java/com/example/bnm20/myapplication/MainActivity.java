@@ -43,15 +43,12 @@ public class MainActivity extends AppCompatActivity {
     public static int deviceWidth;
     public static int deviceHeight;
 
-    ImageView imageView;
+//    ImageView imageView;
     Toolbar toolbar;
 
     TextView toolbar_text;
     ImageButton toolbar_button;
     ImageView toolbar_image;
-
-
-
 
     private DrawerLayout drawerLayout;
 
@@ -74,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setLayoutParams(toolbar_params);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+//        imageView = (ImageView) findViewById(R.id.main_image);
+//        FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) imageView.getLayoutParams();
+//        params.width = deviceWidth;
+//        params.height = deviceHeight - statusheight;
+//        imageView.setLayoutParams(params);
 
 
 

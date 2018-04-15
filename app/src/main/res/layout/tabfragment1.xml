@@ -10,21 +10,41 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:id="@+id/main_content1_image"
-            android:scaleType="fitXY"
-            android:src="@drawable/cloud_little_morning"
-            android:background="#77000000"/>
+        <LinearLayout
+            android:id="@+id/fragment1_linear1"
+            style="@style/Fragment_LinearLayout">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/sub_content1_image"
-            android:scaleType="fitXY"
-            android:src="@drawable/sunny_morning"
-            />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ddddadfasdfasdfasdf"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ddddadfasdfasdfasdf"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment1_linear2"
+            style="@style/Fragment_LinearLayout">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ddddadfasdfasdfasdf"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment1_linear3"
+            style="@style/Fragment_LinearLayout">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ddddadfasdfasdfasdf"/>
+        </LinearLayout>
+
+
     </LinearLayout>
 
 

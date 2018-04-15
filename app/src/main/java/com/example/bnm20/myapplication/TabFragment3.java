@@ -35,8 +35,8 @@ public class TabFragment3 extends Fragment {
         params.height = deviceHeight - statusheight;
         imageView.setLayoutParams(params);
 
-        Drawable alpha = imageView.getDrawable();
-        alpha.setAlpha(99);
+        //Drawable alpha = imageView.getDrawable();
+        //alpha.setAlpha(99);
 
         return v;
     }

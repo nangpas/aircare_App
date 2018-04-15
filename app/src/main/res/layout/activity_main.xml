@@ -15,18 +15,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-
-        <fragment
-            android:id="@+id/fragment_main"
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.example.bnm20.myapplication.BlankFragment"/>
+            android:id="@+id/main_image"
+            android:scaleType="fitXY"
+            android:src="@drawable/cloud_little_morning"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
 
             <android.support.v7.widget.Toolbar
@@ -41,6 +41,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
+
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -94,6 +96,11 @@
 
             </android.support.v7.widget.Toolbar>
 
+            <fragment
+                android:id="@+id/fragment_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="com.example.bnm20.myapplication.BlankFragment"/>
 
         </LinearLayout>
 
