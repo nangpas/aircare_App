@@ -10,19 +10,28 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/fragment1_linear1"
-            style="@style/Fragment_LinearLayout">
+        <RelativeLayout
+            android:id="@+id/fragment_relative1"
+            style="@style/Fragment_relativeLayout">
 
-            <Button
+            <ImageView
+                android:id="@+id/fragment1_weatherimage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ddddadfasdfasdfasdf"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ddddadfasdfasdfasdf"/>
-        </LinearLayout>
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                />
+
+
+        </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/fragment1_linear2"
