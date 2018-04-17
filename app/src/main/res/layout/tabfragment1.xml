@@ -12,24 +12,84 @@
 
         <RelativeLayout
             android:id="@+id/fragment_relative1"
-            style="@style/Fragment_relativeLayout">
+            android:layout_marginBottom="10dp"
+            style="@style/Fragment_relativeLayout"
+            >
+
+            <TextView
+                android:id="@+id/fragment1_temper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_horizontal"
+                android:padding="0dp"
+                android:textColor="#ffffff"
+                />
 
             <ImageView
                 android:id="@+id/fragment1_weatherimage"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:scaleType="fitXY"
-                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
+                android:layout_alignBottom="@id/fragment1_temper_linear"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
                 />
 
+            <LinearLayout
+                android:id="@+id/fragment1_temper_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/fragment1_temper"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/high_temp"
+                    android:layout_margin="0dp"
+                    android:scaleType="fitXY"
+                    android:id="@+id/fragment1_high_temp_image"/>
+
+                <TextView
+                    android:id="@+id/fragment1_high_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="0dp"
+                    android:textColor="#ffffff"
+                    />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/low_temp"
+                    android:scaleType="fitXY"
+                    android:layout_margin="0dp"
+                    android:id="@+id/fragment1_low_temp_image"/>
+
+                <TextView
+                    android:id="@+id/fragment1_low_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="0dp"
+                    android:textColor="#ffffff"
+                    />
+
+
+            </LinearLayout>
 
         </RelativeLayout>
 

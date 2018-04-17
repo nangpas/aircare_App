@@ -10,20 +10,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:id="@+id/main_content2_image"
-            android:scaleType="fitXY"
-            android:src="@drawable/cloud_little_night"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/sub_content1_image"
-            android:scaleType="fitXY"
-            android:src="@drawable/sunny_morning"
+        <com.example.bnm20.myapplication.Layout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             />
+
+
+
     </LinearLayout>
 
 

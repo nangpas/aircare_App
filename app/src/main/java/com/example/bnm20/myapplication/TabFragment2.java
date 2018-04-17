@@ -1,5 +1,10 @@
 package com.example.bnm20.myapplication;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -25,15 +30,12 @@ public class TabFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.tabfragment2, container, false);
 
-        imageView = (ImageView) v.findViewById(R.id.main_content2_image);
-        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) imageView.getLayoutParams();
-        params.width = deviceWidth;
-        params.height = deviceHeight - statusheight;
-        imageView.setLayoutParams(params);
 
         //Drawable alpha = imageView.getDrawable();
         //alpha.setAlpha(99);
 
         return v;
     }
+
+
 }
