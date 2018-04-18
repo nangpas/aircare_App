@@ -1,118 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<android.support.v4.widget.DrawerLayout
+<android.support.v4.widget.SwipeRefreshLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="end">
+    android:id="@+id/swipe_refresh">
 
-    <FrameLayout
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="end">
 
-        <ImageView
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/main_image"
-            android:scaleType="fitXY"
-            android:src="@drawable/cloud_little_morning"
-            />
+            android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:background="#00000000"
-                android:elevation="4dp"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark">
+                android:layout_height="match_parent"
+                android:id="@+id/main_image"
+                android:scaleType="fitXY"
+                android:src="@drawable/cloud_little_morning"
+                />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/toolbar_image"
-                            android:layout_height="15dp"
-                            android:layout_width="15dp"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/icon_mylocation_night"
-                            android:layout_alignParentLeft="true"
-                            />
-
-                        <TextView
-                            android:id="@+id/toolbar_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@+id/toolbar_image"
-                            android:layout_marginTop="5dp"
-                            android:text="대구 복현동"
-                            android:textColor="#FFFFFF"
-                            />
-
-                        <ImageButton
-                            android:id="@+id/toolbar_button"
-                            android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"
-                            android:padding="0dp"
-                            android:src="@drawable/btp_menu_night"
-                            android:scaleType="fitXY"
-                            android:layout_alignParentRight="true"
-                            android:onClick="toolbar_button_onClicked"
-                            android:background="#00000000"
-                            />
-                    </RelativeLayout>
-
-
-
-                    <android.support.design.widget.TabLayout
-                        android:id="@+id/tabLayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#00000000"
-                        app:tabTextColor="@android:color/white"
-                        app:tabMode="fixed"
-                        app:tabGravity="fill"/>
-                </LinearLayout>
-
-
-
-            </android.support.v7.widget.Toolbar>
-
-            <fragment
-                android:id="@+id/fragment_main"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:name="com.example.bnm20.myapplication.BlankFragment"/>
-
-        </LinearLayout>
+                android:orientation="vertical">
 
 
-    </FrameLayout>
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#00000000"
+                    android:elevation="4dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="end"
-        app:menu="@menu/menu"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
 
-</android.support.v4.widget.DrawerLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/toolbar_image"
+                                android:layout_height="15dp"
+                                android:layout_width="15dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_mylocation_night"
+                                android:layout_alignParentLeft="true"
+                                />
+
+                            <TextView
+                                android:id="@+id/toolbar_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/toolbar_image"
+                                android:layout_marginTop="5dp"
+                                android:text="대구 복현동"
+                                android:textColor="#FFFFFF"
+                                />
+
+                            <ImageButton
+                                android:id="@+id/toolbar_button"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:padding="0dp"
+                                android:src="@drawable/btp_menu_night"
+                                android:scaleType="fitXY"
+                                android:layout_alignParentRight="true"
+                                android:onClick="toolbar_button_onClicked"
+                                android:background="#00000000"
+                                />
+                        </RelativeLayout>
+
+
+
+                        <android.support.design.widget.TabLayout
+                            android:id="@+id/tabLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            app:tabTextColor="@android:color/white"
+                            app:tabMode="fixed"
+                            app:tabGravity="fill"/>
+                    </LinearLayout>
+
+
+
+                </android.support.v7.widget.Toolbar>
+
+                <fragment
+                    android:id="@+id/fragment_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="com.example.bnm20.myapplication.BlankFragment"/>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            app:menu="@menu/menu"/>
+
+
+    </android.support.v4.widget.DrawerLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
+

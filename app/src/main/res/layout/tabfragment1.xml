@@ -23,35 +23,46 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:gravity="center_horizontal"
-                android:padding="0dp"
-                android:textColor="#ffffff"
+                android:includeFontPadding="false"
+                android:textColor="#95ffffff"
                 />
 
-            <ImageView
-                android:id="@+id/fragment1_weatherimage"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:scaleType="fitXY"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignBottom="@id/fragment1_temper_linear"
-                />
-
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                />
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/fragment1_weatherimage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+
+                    android:layout_alignBottom="@id/fragment1_temper_linear"
+                    />
+
+                <TextView
+                    android:id="@+id/fragment1_coment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="#95ffffff"
+                    />
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:id="@+id/fragment1_temper_linear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@id/fragment1_temper"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:paddingBottom="5dp"
-                android:orientation="horizontal">
+                android:layout_below="@id/fragment1_temper"
+                android:orientation="horizontal"
+>
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -66,9 +77,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:padding="0dp"
-                    android:textColor="#ffffff"
+                    android:textColor="#95ffffff"
                     />
+
 
 
                 <ImageView
@@ -84,8 +95,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:padding="0dp"
-                    android:textColor="#ffffff"
+                    android:textColor="#95ffffff"
+
                     />
 
 
@@ -113,8 +124,6 @@
                 android:text="ddddadfasdfasdfasdf"/>
         </LinearLayout>
 
-
     </LinearLayout>
-
 
 </ScrollView>

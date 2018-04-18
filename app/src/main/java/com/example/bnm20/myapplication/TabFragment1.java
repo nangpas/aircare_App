@@ -7,6 +7,7 @@ import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.TextViewCompat;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -29,8 +30,11 @@ public class TabFragment1 extends Fragment {
     TextView temper;
     TextView high_temper;
     TextView low_temper;
+    TextView coment;
     ImageView high_temp_Image;
     ImageView low_temp_Image;
+
+    SwipeRefreshLayout refreshLayout = null;
 
     public TabFragment1(){
 
@@ -42,9 +46,11 @@ public class TabFragment1 extends Fragment {
 
         View v = inflater.inflate(R.layout.tabfragment1, container, false);
 
+        refreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swipe_refresh);
+
         weatherImage = (ImageView) v.findViewById(R.id.fragment1_weatherimage);
         weatherImage.setImageResource(R.drawable.icon_weather_map09);
-        RelativeLayout.LayoutParams fragment1_weatherimage_params = (RelativeLayout.LayoutParams) weatherImage.getLayoutParams();
+        LinearLayout.LayoutParams fragment1_weatherimage_params = (LinearLayout.LayoutParams) weatherImage.getLayoutParams();
         fragment1_weatherimage_params.height = deviceWidth/4;
         fragment1_weatherimage_params.width = deviceWidth/4;
         weatherImage.setLayoutParams(fragment1_weatherimage_params);
@@ -85,6 +91,21 @@ public class TabFragment1 extends Fragment {
         fragment1_low_temper.height = deviceWidth/14;
         fragment1_low_temper.width = deviceWidth/14;
         low_temper.setLayoutParams(fragment1_low_temper);
+
+        coment = (TextView) v.findViewById(R.id.fragment1_coment);
+        coment.setText("구름 많음");
+        coment.setTextSize(TypedValue.COMPLEX_UNIT_DIP,convertPixelsToDp(deviceWidth/16,getContext()));
+        LinearLayout.LayoutParams fragment1_coment_params = (LinearLayout.LayoutParams) coment.getLayoutParams();
+        fragment1_coment_params.height = deviceWidth/6;
+        coment.setLayoutParams(fragment1_coment_params);
+
+
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+            }
+        });
 
         return v;
     }
