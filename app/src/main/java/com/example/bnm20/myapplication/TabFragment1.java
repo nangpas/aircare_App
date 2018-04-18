@@ -1,5 +1,6 @@
 package com.example.bnm20.myapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -10,6 +11,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.TextViewCompat;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +21,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import static com.example.bnm20.myapplication.MainActivity.deviceHeight;
 import static com.example.bnm20.myapplication.MainActivity.deviceWidth;
@@ -34,6 +47,9 @@ public class TabFragment1 extends Fragment {
     ImageView high_temp_Image;
     ImageView low_temp_Image;
 
+    double[] x;
+
+
     SwipeRefreshLayout refreshLayout = null;
 
     public TabFragment1(){
@@ -45,8 +61,14 @@ public class TabFragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.tabfragment1, container, false);
-
         refreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.swipe_refresh);
+
+        x = ((AirCareApplication)this.getActivity().getApplication()).getTemp();
+
+
+        ///////////////
+
+        ///////////////
 
         weatherImage = (ImageView) v.findViewById(R.id.fragment1_weatherimage);
         weatherImage.setImageResource(R.drawable.icon_weather_map09);
@@ -57,7 +79,7 @@ public class TabFragment1 extends Fragment {
 
 
         temper = (TextView) v.findViewById(R.id.fragment1_temper);
-        temper.setText("23" + "°");
+        temper.setText(x[0] + "°");
         temper.setTextSize(TypedValue.COMPLEX_UNIT_DIP,convertPixelsToDp(deviceWidth/5,getContext()));
         RelativeLayout.LayoutParams fragment1_temper_params = (RelativeLayout.LayoutParams) temper.getLayoutParams();
         fragment1_temper_params.height = deviceWidth*14 /64;
@@ -98,14 +120,6 @@ public class TabFragment1 extends Fragment {
         LinearLayout.LayoutParams fragment1_coment_params = (LinearLayout.LayoutParams) coment.getLayoutParams();
         fragment1_coment_params.height = deviceWidth/6;
         coment.setLayoutParams(fragment1_coment_params);
-
-
-        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-
-            }
-        });
 
         return v;
     }

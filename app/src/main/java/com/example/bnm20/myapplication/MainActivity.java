@@ -32,7 +32,19 @@ import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity {
+
 
     TabLayout tabLayout;
 
@@ -60,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         refreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
 
@@ -203,5 +217,9 @@ public class MainActivity extends AppCompatActivity {
         }
         return result;
     }
+
+
+
+
 }
 
